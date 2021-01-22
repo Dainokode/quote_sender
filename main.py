@@ -24,7 +24,7 @@ with smtplib.SMTP("smtp.gmail.com") as connection:
     connection.starttls()
     connection.login(user=my_email, password=password)
     fmt = 'From: {}\r\nTo: {}\r\nSubject: {}\r\n{}'
-    if day_of_week == 0 and day_of_week == 4:
+    if day_of_week == 0 or day_of_week == 4:
         connection.sendmail(
             my_email,
             receiver,
