@@ -14,7 +14,6 @@ with open("quotes.txt", encoding="utf8") as quotes_file:
     random_quote = "".join(quote)
 
 
-
 my_email = "your email"
 password = "your password"
 receiver = "email receiver"
