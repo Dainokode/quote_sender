@@ -19,11 +19,11 @@ password = "your password"
 receiver = "email receiver"
 
 
-with smtplib.SMTP("smtp.gmail.com") as connection:
-    connection.starttls()
-    connection.login(user=my_email, password=password)
-    fmt = 'From: {}\r\nTo: {}\r\nSubject: {}\r\n{}'
-    if day_of_week == 0 or day_of_week == 4:
+if day_of_week == 0 or day_of_week == 4:
+    with smtplib.SMTP("smtp.gmail.com") as connection:
+        connection.starttls()
+        connection.login(user=my_email, password=password)
+        fmt = 'From: {}\r\nTo: {}\r\nSubject: {}\r\n{}'
         connection.sendmail(
             my_email,
             receiver,
